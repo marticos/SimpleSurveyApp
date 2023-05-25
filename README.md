@@ -2,9 +2,9 @@
 
 This is a demo app for testing purpose only.
 
-### Setup instractions
+### Setup instructions
 
-Please install Laravel framwork its official docker container and import the repo with the following commnands.
+Please install Laravel framework its official docker container and import the repo with the following commnands.
 
 For Mac users (Docker Desktop recommended):
 
@@ -25,6 +25,18 @@ Import the repo with my code first
 Setup and run the containers
 
 - ./vendor/bin/sail up -d
+
+Access the main container
+If you're using docker desktop just click on the name of the container, it should be laravel.test-1 (please check), and then click on the terminal tab.
+
+If you're on linux or wish to use your terminal:
+
+- docker ps
+- Copy the container id for simplesurveyapp-laravel.test-1 (please check the correct container name)
+- docker exec -it [docker id] /bin/sh
+
+Initialise the project within the container
+
 - php artisan migrate
 - php artisan optimize:clear
 - npm install
